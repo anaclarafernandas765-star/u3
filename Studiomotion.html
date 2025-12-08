@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiomotion</title>
+    <link rel="stylesheet" href="css/style.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <img src="Image (10).jpg" alt="Minha Logo"
+            width="50px"; height="50px";>
+
+        <nav class="header__nav">
+            <a href="#sobre" class="header__link">Sobre</a>
+            <a href="#Area de serviço" class="header__link">Área de serviço</a>
+            <a href="#contato" class="header__link">Quem somos</a>
+        </nav>
+    </header>
+    <div class="container">
+
+        <section class="intro">
+            <div class="intro__content">
+                <h2 class="intro__title">Olá, eu sou  <span class="intro__highlight">STUDIO MONTION</span></h2>
+                <p class="intro__subtitle">Produtora design digital</p>
+                <div class="intro__socials">
+                    <a href="#" class="intro__socials-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="intro__socials-link"><i class="fab fa-twitter"></i></a>
+                </div>
+                <a href="#portfolio" class="btn btn--primary">Ebooks</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="about section">
+            <h2 class="section__title">Sobre nós</h2>
+            <div class="about__content">
+                <p class="section__text">A Studio montion é uma produtora de design especializada em criar soluções criativas e inovadoras para marcas e empresas. Nossa equipe de designers talentosos e apaixonados trabalha em estreita colaboração com os clientes para entender suas necessidades e objetivos, e criar projetos que superem suas expectativas.
+.</p>
+                <a href="#" class="btn btn--secondary">Saiba mais </a>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio section">
+            <h2 class="section__title">Meus Trabalhos</h2>
+            <div class="portfolio__grid">
+                <div class="portfolio__item"><img src="Image (11).jpg" alt="Projeto 1"></div>
+                <div class="portfolio__item"><img src="Image (13).jpg" alt="Projeto 2"></div>
+                <div class="portfolio__item"><img src="Image (14).jpg" alt="Projeto 3"></div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact section">
+            <h2 class="section__title">Contato</h2>
+            <p class="section__text">Interessado(a) em trabalhar comigo? Entre em contato através do formulário abaixo:</p>
+            <form action="#" method="post" class="contact__form">
+                <input type="text" name="name" placeholder="Nome" required class="contact__input">
+                <input type="email" name="email" placeholder="Email" required class="contact__input">
+                <textarea name="message" placeholder="Mensagem" class="contact__textarea"></textarea>
+                <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5599999999999" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Fixo de WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        /* Botão de WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            text-decoration: none;
+            animation: blink 1s infinite;
+            font-size: 24px;
+        }
+         @keyframes blink{
+            0%,50% { opacity: 1;}
+            100% { opacity: 0;}
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+
+        .whatsapp-button img {
+            width: 30px;
+            height: 30px;
+    
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5599999999999" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+:root {
+    --roxo-escuro:#ffc0cb;      /* Fundo, texto principal */
+    --roxo-medio: #7B24A6;       /* Botões, destaques */
+    --roxo-claro: #AF76DB;       /* Links, acentos */
+    --fundo-claro: #F5EEFF;      /* Fundo da seção */
+
+    /* Cores de Texto */
+    --texto-principal: #333;
+    --texto-claro: #fff;
+
+    /* Fontes */
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--fundo-claro);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    color: var(--roxo-escuro);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--roxo-medio);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--roxo-claro);
+}
+
+
+
+.header {
+    background-color: var(--roxo-escuro);
+    color: var(--texto-claro);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: fixed; /* Fixa o elemento na tela */
+      top: 10px; /* Distância do topo */
+      left: 10px; /* Distância da esquerda */
+      width: 100px; 
+      
+}
+
+.header__nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__link {
+    color: var(--texto-claro);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.header__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--roxo-claro);
+    transition: width 0.3s ease;
+}
+
+.header__link:hover::after {
+    width: 100%;
+}
+
+
+.intro {
+    background-image: url(fundop.jpg );
+    color: var(--texto-claro);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+      
+}
+
+.intro__title {
+    font-size: 3.5rem;
+    color: var(--texto-claro);
+ margin-bottom: 0.5rem;
+  font-family: "Engagement", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.intro__highlight {
+    color: var(--roxo-claro);
+}
+
+.intro__subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    animation: slideIn 1s ease-out;
+}
+@keyframes slideIn{
+            from { transform: translateX(-100%); }
+            to {transform:translateX(0) ; }
+}
+
+.intro__socials {
+    margin-bottom: 2rem;
+}
+
+.intro__socials a {
+    color: var(--texto-claro);
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.intro__socials a:hover {
+    transform: translateY(-5px);
+    color: var(--roxo-claro);
+}
+
+.section {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.section--dark {
+    background-color: var(--roxo-escuro);
+    color: var(--texto-claro);
+}
+
+.section__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+   background-color: #ffc0cb;
+    color: white;
+        padding: 40px 40px;
+         font-size: 40px;
+         text-align: center;
+        border-radius: 5px;
+           animation: expand 1.5s ease-in-out infinite;
+        }
+         @keyframes expand{
+            0%, 100% { transform: scale(1); }
+            50% { transform:  scale(1.2); }
+        }
+
+.section__title--light {
+    color: var(--texto-claro);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+}
+
+.btn--primary {
+    background-color: var(--roxo-escuro);
+    color: var(--texto-claro);
+}
+
+.btn--primary:hover {
+    background-color: #ffc0cb;
+}
+
+.btn--secondary {
+    background-color: black;
+    border: 2px solid var(--roxo-escuro);
+    color: var(--roxo-escuro);
+      background-color: #ca9bdd23;
+            padding: 10px;
+            font-size: 22px;
+            animation: zoomIn 1s ease-in;
+         }
+         @keyframes zoomIn{
+            from { transform: scale(0.5); 
+            opacity: 0;
+            }
+            to{ transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+.btn--secondary:hover {
+    background-color: var(--roxo-escuro);
+    color: var(--texto-claro);
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio__item {
+    background-color: var(--roxo-claro);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio__item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.contact__form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__input, .contact__textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--roxo-claro);
+    border-radius: 8px;
+    background-color: var(--fundo-claro);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__input:focus, .contact__textarea:focus {
+    outline: none;
+    border-color: var(--roxo-medio);
+    box-shadow: 0 0 8px rgba(123, 36, 166, 0.2);
+}
+
+.contact__textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+.footer {
+    background-color: var(--roxo-escuro);
+    color: var(--texto-claro);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--roxo-medio);
+    color: var(--texto-claro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+ }
+
+    .image {
+            display: block;
+            width: 100%;
+            height: auto;
+ }
+ 
